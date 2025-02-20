@@ -89,14 +89,14 @@ const StripeForm: React.FC<Props> = ({ paymentId, setupIntent, clientSecret, sit
     };
 
     if (paymentSuccess) {
-        if(// window.localStorage.getItem('niyoToken')) {
-            // window.localStorage.removeItem("niyoToken")
-            // window.location.href="http://localhost:3001"
-        } else if (// window.localStorage.getItem("showDocuments") === "true") {
-            navigate(`/document/${orderId}/?document=${true}`)
-        } else {
+        // if(window.localStorage.getItem('niyoToken')) {
+        //     window.localStorage.removeItem("niyoToken")
+        //     // window.location.href="http://localhost:3001"
+        // } else if (window.localStorage.getItem("showDocuments") === "true") {
+        //     navigate(`/document/${orderId}/?document=${true}`)
+        // } else {
             return <Navigate to="/payment" />;
-        }
+        // }
     }
 
     return (

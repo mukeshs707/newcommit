@@ -5,16 +5,16 @@ import { useEffect, useState } from 'react';
 
 const Header = () => {
 
-  const [isMobile, setIsMobile] = useState(// window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(true);
   
     const handleResize = () => {
-      setIsMobile(// window.innerWidth <= 768);
+      setIsMobile(true);
     };
   
-    useEffect(() => {
-      // // window.addEventListener("resize", handleResize);
-      return () => // window.removeEventListener("resize", handleResize);
-    }, []);
+    // useEffect(() => {
+    //   // window.addEventListener("resize", handleResize);
+    //   return () => window.removeEventListener("resize", handleResize);
+    // }, []);
 
   return (
     <header className={`${isMobile ? "mobile-header" : "desktop-header"} ${styles.headerMain} ff`}>

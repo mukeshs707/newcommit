@@ -203,7 +203,7 @@ const Esim = () => {
         setLoader(false);
         console.log(error);
       });
-      // // window.scrollTo(10, 10);
+      // window.scrollTo(10, 10);
   }, [
     activeTab,
     currency,
@@ -266,10 +266,10 @@ const Esim = () => {
     slidesToScroll: 1,
   };
 
-  const [isMobile, setIsMobile] = useState(// window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(true);
 
   const handleResize = () => {
-    setIsMobile(// window.innerWidth <= 768);
+    setIsMobile(true);
   };
 
   useEffect(() => {
@@ -284,9 +284,9 @@ const Esim = () => {
           toast.error(error?.data?.message || "Something went wrong!");
         });
 
-    // // window.addEventListener("resize", handleResize);
+    // window.addEventListener("resize", handleResize);
     if (isMobile) setActiveTab(1);
-    return () => // window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [isMobile]);
 
   return (

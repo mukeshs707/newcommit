@@ -38,7 +38,7 @@ const Login = () => {
   const [otpId, setOtpId] = useState<any>("");
   const [show, setShow] = useState("")
   const [timer, setTimer] = useState(0);
-  const current_url: any = // window.localStorage.getItem("current_url");
+  const current_url: any = "http";// window.localStorage.getItem("current_url");
 
   const handleSuccess = async (credentialResponse: any) => {
     try {

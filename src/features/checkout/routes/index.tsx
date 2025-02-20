@@ -88,7 +88,7 @@ const Checkout = () => {
   const [walletInput, setWalletInput] = useState(false);
   const [pageError, setPageError] = useState("");
   const currency = useSelector((state: any) => state?.getCurrency?.currency);
-  const current_url: any = // window.localStorage.getItem("current_url");
+  const current_url: any = window.localStorage.getItem("current_url");
   const [showPackageOption, setShowPackageOption] = useState<boolean>(false);
   const [bundleDetails, setBundleDetails] = useState<any>({});
   const [bundleId, setBundleId] = useState<string>("");
@@ -174,7 +174,7 @@ const Checkout = () => {
       };
 
       updateOrder(payload).then((res) => {
-        // window.localStorage.removeItem("current_url");
+        window.localStorage.removeItem("current_url");
         setLoader(false);
       });
     }
@@ -302,7 +302,7 @@ const Checkout = () => {
                 "Your payment is currently in pending status. Please check your order history after 15 minutes for an update."
               );
             } else {
-              // window.location.href = "/payment";
+              window.location.href = "/payment";
             }
           },
           prefill: {
@@ -311,8 +311,8 @@ const Checkout = () => {
             contact: data?.phoneNumber,
           },
         };
-        const rzp = new // window.Razorpay(options);
-        rzp.open();
+        // const rzp = new window.Razorpay(options);
+        // rzp.open();
       });
       setLoader(false);
     } else {
@@ -323,7 +323,7 @@ const Checkout = () => {
       };
       purchaseOrder(payload)
         .then((res) => {
-          // window.location.href = `${NIYO_URL}?status=true`;
+          window.location.href = `${NIYO_URL}?status=true`;
           setLoader(false);
         })
         .catch((error) => {
@@ -989,12 +989,12 @@ const Checkout = () => {
                             ? () => handleCheckout()
                             : () => {
                                 const niyoToken =
-                                  // window.localStorage.getItem("niyoToken");
+                                  window.localStorage.getItem("niyoToken");
                                 if (!niyoToken) {
                                   // window.localStorage.setItem(
-                                    "current_url",
-                                    `/checkout/${params.id}/?paymentGateway=${paymentGateway}`
-                                  );
+                                  //   "current_url",
+                                  //   `/checkout/${params.id}/?paymentGateway=${paymentGateway}`
+                                  // );
                                   navigate(`/login`);
                                 } else {
                                   handleCheckout();
@@ -1076,7 +1076,7 @@ const Checkout = () => {
               orderId={params.id as string}
               closeModal={() => setShow(false)}
               paymentMethod={selectedPaymentMethod}
-              siteDomain={// window.localStorage.getItem("niyoToken") as string}
+              siteDomain={window.localStorage.getItem("niyoToken") as string}
               
             />
           )

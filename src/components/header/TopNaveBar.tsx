@@ -30,7 +30,7 @@ const TopNaveBar = () => {
   const urlToken: any = queryParams.get("token");
 
   useEffect(() => {
-    if (!urlToken) // window.localStorage.removeItem("niyoToken");
+    // if (!urlToken) window.localStorage.removeItem("niyoToken");
     setLoader(true);
     getLanguage().then((res: any) => {
       setGetLanguages(res?.data?.languages);

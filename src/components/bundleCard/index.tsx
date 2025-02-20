@@ -22,15 +22,15 @@ const BundleCard = ({ bundle, coupon, topup }: Props) => {
     const navigate = useNavigate();
     const [loader, setLoader] = useState(false);
 
-    const [isMobile, setIsMobile] = useState(// window.innerWidth <= 768);
+    const [isMobile, setIsMobile] = useState(true);
 
     const handleResize = () => {
-        setIsMobile(// window.innerWidth <= 768);
+        // setIsMobile(true);
     };
 
     useEffect(() => {
-        // // window.addEventListener("resize", handleResize);
-        return () => // window.removeEventListener("resize", handleResize);
+        // window.addEventListener("resize", handleResize);
+        // return () => window.removeEventListener("resize", handleResize);
     }, [isMobile]);
 
     const createOrder = () => {

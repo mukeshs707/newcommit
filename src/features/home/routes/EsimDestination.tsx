@@ -61,7 +61,7 @@ const EsimDestination: React.FC = () => {
   });
   const [geoLoactionErr, setGeoLoactionErr] = useState<boolean>(false);
 
-  const [isMobile, setIsMobile] = useState(// window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(true);
   const [showSomeDropdown, setShowSomeDropdown] = useState<any>({
     installation: false,
     deviceCompatibility: false,
@@ -69,13 +69,13 @@ const EsimDestination: React.FC = () => {
   const [deviceName, setDeviceName] = useState("");
 
   const handleResize = () => {
-    setIsMobile(// window.innerWidth <= 768);
+    setIsMobile(true);
   };
 
   useEffect(() => {
-    // // window.addEventListener("resize", handleResize);
+    // window.addEventListener("resize", handleResize);
     if (isMobile) setActiveTab(1);
-    return () => // window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [isMobile]);
 
   const showWelcomeModalShow = (val: any) => {

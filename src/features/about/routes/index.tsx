@@ -18,7 +18,7 @@ const AboutUs = () => {
     getPages({ type: 4 }).then(res => {
       setAboutPage(res.data.data.content);
     });
-    // window.scrollTo(0, 0);
+    // // window.scrollTo(0, 0);
   }, [])
 
   return (

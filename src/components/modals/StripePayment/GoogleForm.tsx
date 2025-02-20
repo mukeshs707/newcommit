@@ -47,11 +47,11 @@ const GoogleStripeForm = ({ paymentId }: Props) => {
     };
     handleStripePayment()
     const handlePayment = async () => {
-        if (// window.PaymentRequest) {
+        // if (window.PaymentRequest) {
             await handleGooglePayPayment();
-        } else {
-            await handleStripePayment();
-        }
+        // } else {
+        //     await handleStripePayment();
+        // }
     };
 
     if (paymentSuccess) {

@@ -29,7 +29,7 @@ const FooterContainer: React.FC<FooterContainerProps> = ({ styles }) => {
   const [chatBoxOpen, setChatBoxOpen] = useState(false);
 
   const location = useLocation();
-  const getRoot = // window.location.origin;
+  const getRoot = "http";// window.location.origin;
 
   useEffect(() => {
     const getPopularContries = async () => {

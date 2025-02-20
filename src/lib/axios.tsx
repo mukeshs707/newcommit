@@ -4,7 +4,7 @@ import { API_URL } from "../config";
 import storage from "../utils/storage";
 
 function authRequestInterceptor(config: InternalAxiosRequestConfig) {
-	const niyoToken = // window.localStorage.getItem('niyoToken');
+	const niyoToken = window.localStorage.getItem('niyoToken');
 
 	const token = niyoToken ? niyoToken : storage.getToken();
 

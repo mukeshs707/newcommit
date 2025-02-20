@@ -181,7 +181,7 @@ const Forgot = () => {
 		if (!forgetPasswordFormik.values.loginIdentifier) {
 			setPhoneNumberInput(false);
 		}
-		// window.scrollTo(0, 0);
+		// // window.scrollTo(0, 0);
 	}, [forgetPasswordFormik.values.loginIdentifier]);
 
 

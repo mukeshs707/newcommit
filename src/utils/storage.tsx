@@ -2,7 +2,7 @@ import { AUTH } from "./auth";
 
 const storage = {
 	getToken: () => {
-		return // window.localStorage.getItem("token");
+		// return window.localStorage.getItem("token");
 	},
 	setToken: (token: string) => {
 		// window.localStorage.setItem("token", token);
@@ -11,13 +11,13 @@ const storage = {
 		// window.localStorage.removeItem("token");
 	},
 	validateRememberMe:()=>{
-		if(// window.localStorage.getItem(AUTH.REMEMBERME)===AUTH.TRUE)
-		{
-			return true;
-		}
-		else{
-			return false
-		}
+		// if(window.localStorage.getItem(AUTH.REMEMBERME)===AUTH.TRUE)
+		// {
+		// 	return true;
+		// }
+		// else{
+		// 	return false
+		// }
 	}
 	,
 	storeRememberMe:(token:string)=>{
