@@ -6,11 +6,11 @@ const AppRedirect: React.FC = () => {
 
   useEffect(() => {
     // Attempt to open the deep link
-    (// window.location as any).href = appLink;
+    // window.location as any).href = appLink;
 
     // If the deep link fails, fallback to Play Store link after 2 seconds
     const timer = setTimeout(() => {
-      (// window.location as any).href = fallbackLink;
+      // window.location as any).href = fallbackLink;
     }, 2000);
 
     // Clear the timeout if the component unmounts
