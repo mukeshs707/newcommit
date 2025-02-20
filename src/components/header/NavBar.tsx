@@ -24,7 +24,7 @@ import { getUserData } from '../../redux/api';
 
 const NavBar = () => {
   const { isAuthenticated } = useAuth();
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(// window.innerWidth <= 768);
   const [loader, setLoader]= useState<boolean>(true);
   const { data } : any = useSelector((state: any) => state.getUserData);
   const dispatch = useDispatch();
@@ -47,12 +47,12 @@ const NavBar = () => {
   }, [isAuthenticated]);
   
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
+    setIsMobile(// window.innerWidth <= 768);
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    // // window.addEventListener("resize", handleResize);
+    return () => // window.removeEventListener("resize", handleResize);
   }, []);
 
 

@@ -36,7 +36,7 @@ const Dashboard = () => {
             }
         }
         userData()
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, [dispatch]);
 
     useEffect(() => {

@@ -41,10 +41,10 @@ const Signup: React.FC = () => {
     const [loader, setLoader] = useState<boolean>(false);
     const [newPasswordShown, setNewPasswordShown] = useState<boolean>(false);
     const [confirmPasswordShown, setConfirmPasswordShown] = useState<boolean>(false);
-    const current_url: any = window.localStorage.getItem("current_url");
+    const current_url: any = // window.localStorage.getItem("current_url");
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
         GetGeoLoactions()
             .then((data: any) => {
                 setGeoLocations(data)

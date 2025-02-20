@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
     getPages({type:1}).then(res => {
       setPrivacyPolicy(res.data.data.content);
     });
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, [])
 
   return (

@@ -4,7 +4,7 @@ import { API_URL } from "../config";
 import storage from "../utils/storage";
 
 function authRequestInterceptor(config: InternalAxiosRequestConfig) {
-	const niyoToken = window.localStorage.getItem('niyoToken');
+	const niyoToken = // window.localStorage.getItem('niyoToken');
 
 	const token = niyoToken ? niyoToken : storage.getToken();
 
@@ -29,7 +29,7 @@ axios.interceptors.response.use(
 	(error) => {
 		if (error.response && error.response.status === 401 && storage.getToken()) {
 			localStorage.clear();
-			window.location.href = '/login';
+			// window.location.href = '/login';
 		}
 		return Promise.reject(error.response);
 	}

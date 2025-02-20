@@ -8,13 +8,13 @@ const redirectToStore = (setLoader: (state: boolean) => void): void => {
 
   if (isIOS) {
     setLoader(false);
-    window.location.href = "https://apps.apple.com/in/app/commbitz-e-sim/id6572300745";
+    // window.location.href = "https://apps.apple.com/in/app/commbitz-e-sim/id6572300745";
   } else if (/android/i.test(userAgent)) {
     setLoader(false);
-    window.location.href = "https://play.google.com/store/apps/details?id=com.commbitz";
+    // window.location.href = "https://play.google.com/store/apps/details?id=com.commbitz";
   } else {
     setLoader(false);
-    window.location.href = "https://commbitz.netsolutionindia.com/";
+    // window.location.href = "https://commbitz.netsolutionindia.com/";
   }
 };
 

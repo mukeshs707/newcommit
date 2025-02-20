@@ -40,7 +40,7 @@ const Blog = () => {
 
     useEffect(() => {
         fetchBlogData(currentPage);
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, [currentPage]);
 
     const handlePageChange = (page: number) => {

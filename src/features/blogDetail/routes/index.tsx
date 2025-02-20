@@ -34,7 +34,7 @@ const Blogdetail = () => {
             }
         };
         fetchBlogData();
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
 
         const fetchComments = async () => {
             try {

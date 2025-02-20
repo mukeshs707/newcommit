@@ -39,7 +39,7 @@ function EsimDetails() {
             console.log(error)
             setLoader(false)
         })
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
    
 

@@ -33,7 +33,7 @@ const Purchase = () => {
         }).catch((error: any) => {
             setLoader(false)
         })
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
 
     // Function to handle page change

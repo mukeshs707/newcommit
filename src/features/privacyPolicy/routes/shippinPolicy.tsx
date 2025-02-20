@@ -20,7 +20,7 @@ const ShippingPolicy = () => {
     getPages({type:8}).then((res:any) => {
       setPrivacyPolicy(res.data.data.content);
     });
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, [])
 
   return (

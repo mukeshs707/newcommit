@@ -60,15 +60,15 @@ function Document() {
             }, 5000)
         }
         if ((urlToken && secureToken?.error) || (urlUserPartnerInfo && secureUserPartnerInfoId?.error)) {
-            window.localStorage.removeItem("niyoToken")
+            // window.localStorage.removeItem("niyoToken")
             if (secureToken?.error || secureUserPartnerInfoId?.error) toast.error("Token not exist")
 
             setTimeout(() => {
-                window.location.href = NIYO_URL
+                // window.location.href = NIYO_URL
             }, 5000)
         }
-        if ((urlToken && !secureToken?.error) && (urlUserPartnerInfo && !secureUserPartnerInfoId?.error)) window.localStorage.setItem("niyoToken", secureToken)
-        window.scrollTo(0, 0);
+        if ((urlToken && !secureToken?.error) && (urlUserPartnerInfo && !secureUserPartnerInfoId?.error)) // window.localStorage.setItem("niyoToken", secureToken)
+        // window.scrollTo(0, 0);
         getFireBaseToken()
     }, [])
 

@@ -20,7 +20,7 @@ const RefundPolicy = () => {
     getPages({type:7}).then(res => {
       setPrivacyPolicy(res.data.data.content);
     });
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, [])
 
   return (

@@ -2,16 +2,16 @@ import { AUTH } from "./auth";
 
 const storage = {
 	getToken: () => {
-		return window.localStorage.getItem("token");
+		return // window.localStorage.getItem("token");
 	},
 	setToken: (token: string) => {
-		window.localStorage.setItem("token", token);
+		// window.localStorage.setItem("token", token);
 	},
 	clearToken: () => {
-		window.localStorage.removeItem("token");
+		// window.localStorage.removeItem("token");
 	},
 	validateRememberMe:()=>{
-		if(window.localStorage.getItem(AUTH.REMEMBERME)===AUTH.TRUE)
+		if(// window.localStorage.getItem(AUTH.REMEMBERME)===AUTH.TRUE)
 		{
 			return true;
 		}
@@ -21,7 +21,7 @@ const storage = {
 	}
 	,
 	storeRememberMe:(token:string)=>{
-		window.localStorage.setItem(AUTH.REMEMBERME, token);
+		// window.localStorage.setItem(AUTH.REMEMBERME, token);
 	}
 
 };

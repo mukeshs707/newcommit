@@ -115,7 +115,7 @@ const Esim = () => {
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
     setLoader(true)
-    window.scrollTo(600, 600);
+    // window.scrollTo(600, 600);
   };
 
   const pageRecords = 12;
@@ -137,7 +137,7 @@ const Esim = () => {
         console.log(err, "getRegions ");
         setLoader(false)
       });
-      window.scrollTo(10, 10);
+      // window.scrollTo(10, 10);
     // getBundleFilterData({ search: searchParams }).then((res: any) => {
     //     setEsimFilterData(res?.data[0])
     // }).catch((error) => {
@@ -167,7 +167,7 @@ const Esim = () => {
       setSearchParams("");
       params.regionType = 1;
       setActiveTab(1);
-      window.scrollTo(600, 600);
+      // window.scrollTo(600, 600);
     }
 
     if (bundleFilter.country || bundleFilter.region || bundleFilter.search) {
@@ -203,7 +203,7 @@ const Esim = () => {
         setLoader(false);
         console.log(error);
       });
-      // window.scrollTo(10, 10);
+      // // window.scrollTo(10, 10);
   }, [
     activeTab,
     currency,
@@ -266,10 +266,10 @@ const Esim = () => {
     slidesToScroll: 1,
   };
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(// window.innerWidth <= 768);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
+    setIsMobile(// window.innerWidth <= 768);
   };
 
   useEffect(() => {
@@ -284,9 +284,9 @@ const Esim = () => {
           toast.error(error?.data?.message || "Something went wrong!");
         });
 
-    window.addEventListener("resize", handleResize);
+    // // window.addEventListener("resize", handleResize);
     if (isMobile) setActiveTab(1);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => // window.removeEventListener("resize", handleResize);
   }, [isMobile]);
 
   return (

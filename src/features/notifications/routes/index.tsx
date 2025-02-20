@@ -29,7 +29,7 @@ const Notifications = () => {
                 console.error('Error getting location:', error);
                 setLoader(false)
             })
-            window.scrollTo(0, 0);
+            // window.scrollTo(0, 0);
     }, []);
 
     //        // Function to handle page change

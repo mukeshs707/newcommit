@@ -18,7 +18,7 @@ const Terms_Conditions = () => {
         getPages({type:2}).then(res => {
             setTermsConditions(res.data.data.content);
         })
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, [])
 
     return (

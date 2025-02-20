@@ -122,7 +122,7 @@ function PackageOption() {
         setLoader(false)
         toast.error(error?.data?.message || "Something went wrong!");
       });
-    window.scrollTo(100, 100);
+    // window.scrollTo(100, 100);
   }, [countryName]);
 
   const handleBundleDetails = (params: any) => {
