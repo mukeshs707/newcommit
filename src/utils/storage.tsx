@@ -2,15 +2,16 @@ import { AUTH } from "./auth";
 
 const storage = {
 	getToken: () => {
-		// return window.localStorage.getItem("token");
+		return "test";// window.localStorage.getItem("token");
 	},
 	setToken: (token: string) => {
-		// window.localStorage.setItem("token", token);
+		return "test";//// window.localStorage.setItem("token", token);
 	},
 	clearToken: () => {
-		// window.localStorage.removeItem("token");
+		return "test";// window.localStorage.removeItem("token");
 	},
 	validateRememberMe:()=>{
+		return true;
 		// if(window.localStorage.getItem(AUTH.REMEMBERME)===AUTH.TRUE)
 		// {
 		// 	return true;
@@ -21,7 +22,7 @@ const storage = {
 	}
 	,
 	storeRememberMe:(token:string)=>{
-		// window.localStorage.setItem(AUTH.REMEMBERME, token);
+		return "test";//// window.localStorage.setItem(AUTH.REMEMBERME, token);
 	}
 
 };

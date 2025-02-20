@@ -30,9 +30,9 @@ const useAuth = () => {
     };
 
     const ProtectedRoute = ({ component: Component, ...rest }: any) => {
-        if (!isAuthenticated && !storage.getToken()) {
+        // if (!isAuthenticated && !storage.getToken()) {
             return <AuthRedirect to={APP_ROUTES.HOME} />;
-        }
+        // }
 
         return <Component {...rest} />;
     };
